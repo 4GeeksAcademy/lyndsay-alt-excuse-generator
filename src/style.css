@@ -1,5 +1,106 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: white;
+body {
+    margin: 100px;
+    padding: 50px;
+    font-family: Marker Felt;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("https://cdn.pixabay.com/photo/2015/07/06/07/51/background-833061_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 40px solid black;
+    outline: 20px solid yellow;
+    outline-offset: -20px;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+
+h1 {
+    font-family: impact;
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    color: black;
+}
+
+#excuse {
+    font-size: 35px;
+    font-style: bold;
+    text-align: center;
+    max-width: 500px;
+    line-height: 1.5;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    transition: color 0.5s ease;
+}
+
+#newExcuse {
+    width: 100px;
+    height: 100px;
+    border: none;
+    background: #007bff;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#newExcuse:hover {
+    background: #0056b3;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: solid 2px #0056b3;
+    border-radius: 4px;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+#cartoons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#cartoons .cartoon {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#cartoons .cartoon:hover {
+    transform: scale(1.2);
 }
